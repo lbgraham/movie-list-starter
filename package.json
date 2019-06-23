@@ -4,6 +4,8 @@
   "description": "A starter repo for Hack Reactor's Movie List prompt with webpack setup.",
   "main": "index.js",
   "scripts": {
+    "start": "live-server dist --port=8081",
+    "watch": "webpack -w"
   },
   "repository": {
     "type": "git",
@@ -16,9 +18,15 @@
   },
   "homepage": "https://github.com/RamKhalsa/movie-list-starter#readme",
   "dependencies": {
+    "dist": "^0.1.2",
+    "jquery": "^3.4.1",
+    "live-server": "^1.2.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel": "^6.23.0",
@@ -30,6 +38,7 @@
     "node": "^11.11.0",
     "style-loader": "^0.23.1",
     "underscore": "^1.9.1",
-    "webpack": "^4.29.6"
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.4"
   }
 }
