@@ -27,7 +27,14 @@ class App extends React.Component {
     // This is an example of conditional rendering
     var generateMovieList = () => {
       if(this.state.isFiltered) {
-        return <MovieList movies={this.props.movies.filter(movie => movie.title.includes(this.state.searchValue))}/>
+        var filteredList = this.props.movies.filter(movie => movie.title.includes(this.state.searchValue));
+        
+        // Gracefully handle a search that does not have any results
+        if(filteredList.length === 0) {
+          return <tr><td>No results brah</td></tr>
+        } else {
+          return <MovieList movies={this.props.movies.filter(movie => movie.title.includes(this.state.searchValue))}/>
+        }
       } else {
         return <MovieList movies={this.props.movies}/>
       }
