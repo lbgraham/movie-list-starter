@@ -3,13 +3,15 @@ import MovieListEntry from './MovieListEntry.jsx';
 
 function MovieList(props) {
   return  (
-    <ul>
-          {
-            props.movies.map((movie) => (
-            <MovieListEntry key={movie.title} movie={movie} />
-            ))
-          }
-    </ul>
+    <tr>
+      <td>
+        {
+          props.movies.map((movie) => (
+          <MovieListEntry key={movie.title} movie={movie} />
+          ))
+        }
+      </td>
+    </tr>
   )
 }
 

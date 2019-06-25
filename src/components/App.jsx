@@ -18,7 +18,7 @@ class App extends React.Component {
     this.setState({searchValue: e.target.value})
   }
 
-  handleSubmit(e) {
+  handleSubmit() {
     event.preventDefault();
     this.setState({isFiltered: true})
   }
@@ -39,7 +39,11 @@ class App extends React.Component {
           <SearchBar handleChange={this.handleChange} handleSubmit={this.handleSubmit} searchValue={this.state.searchValue}/>
         </div>
         <div>
-          {generateMovieList()}
+          <table>
+            <tbody>
+              {generateMovieList()}
+            </tbody>
+          </table>
         </div>
       </div>
     )
